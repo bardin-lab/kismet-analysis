@@ -1,0 +1,229 @@
+{
+  "uuid": "c96fe147-686b-4a8b-a280-a5105c24da9d",
+  "tags": [],
+  "format-version": "0.1",
+  "name": "DamID: Metaplot workflow",
+  "version": 3,
+  "steps": {
+    "0": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "10cc1ae6-2bf9-4e93-8c71-5ed23d8f32b7",
+          "label": null
+        }
+      ],
+      "input_connections": {},
+      "tool_state": "{}",
+      "id": 0,
+      "uuid": "dd029430-d6e4-4c33-a02c-368e74216197",
+      "errors": null,
+      "name": "Input dataset",
+      "label": "region 1",
+      "inputs": [],
+      "position": {
+        "top": 200,
+        "left": 200
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_input"
+    },
+    "1": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "27ad5044-28ee-48db-8307-c62a63fef43a",
+          "label": null
+        }
+      ],
+      "input_connections": {},
+      "tool_state": "{}",
+      "id": 1,
+      "uuid": "aca5470c-8282-40a5-bcf7-457140e83c3a",
+      "errors": null,
+      "name": "Input dataset",
+      "label": "region 2",
+      "inputs": [],
+      "position": {
+        "top": 274,
+        "left": 197
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_input"
+    },
+    "2": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [],
+      "input_connections": {},
+      "tool_state": "{\"collection_type\": \"list\"}",
+      "id": 2,
+      "uuid": "7ea8be7c-db35-49e4-a71b-9c68e1ba6be5",
+      "errors": null,
+      "name": "Input dataset collection",
+      "label": null,
+      "inputs": [],
+      "position": {
+        "top": 379,
+        "left": 189
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_collection_input"
+    },
+    "3": {
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_compute_matrix/deeptools_compute_matrix/2.5.1.1.0",
+      "tool_version": "2.5.1.1.0",
+      "outputs": [
+        {
+          "type": "deeptools_compute_matrix_archive",
+          "name": "outFileName"
+        },
+        {
+          "type": "bed",
+          "name": "outFileSortedRegions"
+        },
+        {
+          "type": "tabular",
+          "name": "outFileNameMatrix"
+        }
+      ],
+      "workflow_outputs": [],
+      "input_connections": {
+        "regionsFiles_0|regionsFile": {
+          "output_name": "output",
+          "id": 0
+        },
+        "regionsFiles_1|regionsFile": {
+          "output_name": "output",
+          "id": 1
+        },
+        "multibigwig_conditional|bigwigfiles": {
+          "output_name": "output",
+          "id": 2
+        }
+      },
+      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"multibigwig_conditional\": \"{\\\"__current_case__\\\": 0, \\\"bigwigfiles\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"orderMatters\\\": \\\"No\\\"}\", \"mode\": \"{\\\"__current_case__\\\": 1, \\\"afterRegionStartLength\\\": \\\"10000\\\", \\\"beforeRegionStartLength\\\": \\\"10000\\\", \\\"mode_select\\\": \\\"reference-point\\\", \\\"nanAfterEnd\\\": \\\"false\\\", \\\"referencePoint\\\": \\\"TSS\\\"}\", \"output\": \"{\\\"__current_case__\\\": 0, \\\"showOutputSettings\\\": \\\"no\\\"}\", \"advancedOpt\": \"{\\\"__current_case__\\\": 1, \\\"averageTypeBins\\\": \\\"mean\\\", \\\"binSize\\\": \\\"50\\\", \\\"blackListFileName\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"exonID\\\": \\\"exon\\\", \\\"maxThreshold\\\": \\\"\\\", \\\"metagene\\\": \\\"false\\\", \\\"minThreshold\\\": \\\"\\\", \\\"missingDataAsZero\\\": \\\"true\\\", \\\"samplesLabel\\\": \\\"\\\", \\\"scale\\\": \\\"\\\", \\\"showAdvancedOpt\\\": \\\"yes\\\", \\\"skipZeros\\\": \\\"false\\\", \\\"sortRegions\\\": \\\"keep\\\", \\\"sortUsing\\\": \\\"mean\\\", \\\"transcriptID\\\": \\\"transcript\\\", \\\"transcript_id_designator\\\": \\\"transcript_id\\\"}\", \"regionsFiles\": \"[{\\\"__index__\\\": 0, \\\"regionsFile\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}}, {\\\"__index__\\\": 1, \\\"regionsFile\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}}]\"}",
+      "id": 3,
+      "tool_shed_repository": {
+        "owner": "bgruening",
+        "changeset_revision": "fd1275e01605",
+        "name": "deeptools_compute_matrix",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "uuid": "971456c9-f1d7-466c-ae15-d1b3ea5124b9",
+      "errors": null,
+      "name": "computeMatrix",
+      "post_job_actions": {
+        "HideDatasetActionoutFileNameMatrix": {
+          "output_name": "outFileNameMatrix",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        },
+        "HideDatasetActionoutFileSortedRegions": {
+          "output_name": "outFileSortedRegions",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        },
+        "HideDatasetActionoutFileName": {
+          "output_name": "outFileName",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        }
+      },
+      "label": null,
+      "inputs": [
+        {
+          "name": "advancedOpt",
+          "description": "runtime parameter for tool computeMatrix"
+        }
+      ],
+      "position": {
+        "top": 178,
+        "left": 482
+      },
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_compute_matrix/deeptools_compute_matrix/2.5.1.1.0",
+      "type": "tool"
+    },
+    "4": {
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_plot_heatmap/deeptools_plot_heatmap/3.1.2.0.1",
+      "tool_version": "3.1.2.0.1",
+      "outputs": [
+        {
+          "type": "png",
+          "name": "outFileName"
+        },
+        {
+          "type": "bed",
+          "name": "outFileSortedRegions"
+        },
+        {
+          "type": "tabular",
+          "name": "outFileNameMatrix"
+        }
+      ],
+      "workflow_outputs": [
+        {
+          "output_name": "outFileName",
+          "uuid": "3b6e49cb-f61f-45a7-afa4-89563d20466c",
+          "label": "HeatMap"
+        }
+      ],
+      "input_connections": {
+        "matrixFile": {
+          "output_name": "outFileName",
+          "id": 3
+        }
+      },
+      "tool_state": "{\"__page__\": null, \"output\": \"{\\\"__current_case__\\\": 1, \\\"dpi\\\": \\\"200\\\", \\\"outFileFormat\\\": \\\"pdf\\\", \\\"saveMatrix\\\": \\\"false\\\", \\\"saveSortedRegions\\\": \\\"false\\\", \\\"showOutputSettings\\\": \\\"yes\\\"}\", \"advancedOpt\": \"{\\\"__current_case__\\\": 1, \\\"alpha\\\": \\\"1.0\\\", \\\"averageTypeSummaryPlot\\\": \\\"mean\\\", \\\"colorList\\\": \\\"\\\", \\\"colorMapRepeat\\\": [{\\\"__index__\\\": 0, \\\"colorMap\\\": \\\"RdYlBu_r\\\"}], \\\"endLabel\\\": \\\"TES\\\", \\\"heatmapHeight\\\": \\\"25.0\\\", \\\"heatmapWidth\\\": \\\"7.5\\\", \\\"labelRotation\\\": \\\"0\\\", \\\"legendLocation\\\": \\\"best\\\", \\\"missingDataColor\\\": \\\"black\\\", \\\"perGroup\\\": \\\"false\\\", \\\"plotTitle\\\": \\\"\\\", \\\"plotType\\\": \\\"se\\\", \\\"referencePointLabel\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"regionsLabel\\\": \\\"\\\", \\\"samplesLabel\\\": \\\"\\\", \\\"showAdvancedOpt\\\": \\\"yes\\\", \\\"sortRegions\\\": \\\"descend\\\", \\\"sortUsing\\\": \\\"mean\\\", \\\"startLabel\\\": \\\"TSS\\\", \\\"used_multiple_regions\\\": {\\\"__current_case__\\\": 1, \\\"used_multiple_regions_options\\\": \\\"yes\\\"}, \\\"whatToShow\\\": \\\"plot, heatmap and colorbar\\\", \\\"xAxisLabel\\\": \\\"distance from TSS (bp)\\\", \\\"yAxisLabel\\\": \\\"genes\\\", \\\"yMax\\\": \\\"\\\", \\\"yMin\\\": \\\"\\\", \\\"zMax\\\": \\\"\\\", \\\"zMin\\\": \\\"\\\"}\", \"__rerun_remap_job_id__\": null, \"matrixFile\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\"}",
+      "id": 4,
+      "tool_shed_repository": {
+        "owner": "bgruening",
+        "changeset_revision": "46992aa30bd6",
+        "name": "deeptools_plot_heatmap",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "uuid": "13210722-de10-462b-9a71-cbb0a8ea07fb",
+      "errors": null,
+      "name": "plotHeatmap",
+      "post_job_actions": {
+        "HideDatasetActionoutFileNameMatrix": {
+          "output_name": "outFileNameMatrix",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        },
+        "HideDatasetActionoutFileSortedRegions": {
+          "output_name": "outFileSortedRegions",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        }
+      },
+      "label": null,
+      "inputs": [
+        {
+          "name": "advancedOpt",
+          "description": "runtime parameter for tool plotHeatmap"
+        }
+      ],
+      "position": {
+        "top": 210,
+        "left": 912
+      },
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_plot_heatmap/deeptools_plot_heatmap/3.1.2.0.1",
+      "type": "tool"
+    }
+  },
+  "annotation": "",
+  "a_galaxy_workflow": "true"
+}

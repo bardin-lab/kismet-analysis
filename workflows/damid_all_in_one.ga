@@ -1,0 +1,1745 @@
+{
+  "uuid": "da944b14-2db4-4fee-92fa-67aea1eeb159",
+  "tags": [],
+  "format-version": "0.1",
+  "name": "DamID all-in-one",
+  "version": 12,
+  "steps": {
+    "0": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "c79a461c-d961-40ef-a9fc-a8b59d3039b4",
+          "label": null
+        }
+      ],
+      "input_connections": {},
+      "tool_state": "{\"collection_type\": \"list\"}",
+      "id": 0,
+      "uuid": "87f8c824-4aae-43c7-9870-893c2bcf0ed8",
+      "errors": null,
+      "name": "Input dataset collection",
+      "label": "Fusion FASTQ files",
+      "inputs": [],
+      "position": {
+        "top": 238.5,
+        "left": 163
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_collection_input"
+    },
+    "1": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "c61d25b4-3282-429f-ab26-68a11231919f",
+          "label": null
+        }
+      ],
+      "input_connections": {},
+      "tool_state": "{\"collection_type\": \"list\"}",
+      "id": 1,
+      "uuid": "936ae818-1d4f-420c-8dcb-ff88c4cd09c1",
+      "errors": null,
+      "name": "Input dataset collection",
+      "label": "Control FASTQ files",
+      "inputs": [],
+      "position": {
+        "top": 326.5,
+        "left": 174.5
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_collection_input"
+    },
+    "2": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "bc712154-4114-4b40-82df-0495625304e7",
+          "label": null
+        }
+      ],
+      "input_connections": {},
+      "tool_state": "{}",
+      "id": 2,
+      "uuid": "86bea193-bf93-4dc8-9495-8bd8795bbd1d",
+      "errors": null,
+      "name": "Input dataset",
+      "label": "GFF file with all GATC sites",
+      "inputs": [],
+      "position": {
+        "top": 433,
+        "left": 158.5
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_input"
+    },
+    "3": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "f04bb598-0470-4a6d-b1fc-a058aa97c40e",
+          "label": null
+        }
+      ],
+      "input_connections": {},
+      "tool_state": "{}",
+      "id": 3,
+      "uuid": "3d966cf0-b76d-40a9-a4e6-3a8be02aa06f",
+      "errors": null,
+      "name": "Input dataset",
+      "label": "Dm6 gene model (GFF)",
+      "inputs": [],
+      "position": {
+        "top": 890.5,
+        "left": 271
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_input"
+    },
+    "4": {
+      "tool_id": null,
+      "tool_version": null,
+      "outputs": [],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "78f64827-879f-4a0c-a058-dd0dec026585",
+          "label": null
+        }
+      ],
+      "input_connections": {},
+      "tool_state": "{}",
+      "id": 4,
+      "uuid": "4c94fea2-e72f-4d42-95cd-8c26c007254f",
+      "errors": null,
+      "name": "Input dataset",
+      "label": "mappable GATC sites (BED)",
+      "inputs": [],
+      "position": {
+        "top": 999.5,
+        "left": 275
+      },
+      "annotation": "",
+      "content_id": null,
+      "type": "data_input"
+    },
+    "5": {
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/collection_element_identifiers/collection_element_identifiers/0.0.1",
+      "tool_version": "0.0.1",
+      "outputs": [
+        {
+          "type": "txt",
+          "name": "output"
+        }
+      ],
+      "workflow_outputs": [],
+      "input_connections": {
+        "input_collection": {
+          "output_name": "output",
+          "id": 1
+        }
+      },
+      "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_collection\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\"}",
+      "id": 5,
+      "tool_shed_repository": {
+        "owner": "iuc",
+        "changeset_revision": "220ee3518f19",
+        "name": "collection_element_identifiers",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "uuid": "4ac4ce70-395d-4f6d-a215-c3bc219aeddd",
+      "errors": null,
+      "name": "Extract element identifiers",
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "output_name": "output",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        }
+      },
+      "label": null,
+      "inputs": [],
+      "position": {
+        "top": 478.5,
+        "left": 730.5
+      },
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/collection_element_identifiers/collection_element_identifiers/0.0.1",
+      "type": "tool"
+    },
+    "6": {
+      "tool_id": "33875c904edb83c4",
+      "inputs": [],
+      "outputs": [],
+      "subworkflow": {
+        "uuid": "08576bc6-5626-40c3-aa6d-56d3c82cc891",
+        "tags": "",
+        "format-version": "0.1",
+        "name": "DamID: Fastq to Alignment files",
+        "steps": {
+          "0": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+              {
+                "output_name": "output",
+                "uuid": "6b09ba4a-5834-4083-a414-9ee0cd889fb2",
+                "label": null
+              }
+            ],
+            "input_connections": {},
+            "tool_state": "{\"collection_type\": \"list\"}",
+            "id": 0,
+            "uuid": "1fe3f5eb-04f6-4935-bb13-5a173e32e933",
+            "errors": null,
+            "name": "Input dataset collection",
+            "label": "Fusion Dam FASTQ",
+            "inputs": [],
+            "position": {
+              "top": 190.5,
+              "left": 220
+            },
+            "annotation": "",
+            "content_id": null,
+            "type": "data_collection_input"
+          },
+          "1": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+              {
+                "output_name": "output",
+                "uuid": "e0851fe4-16d6-4eb5-a92c-d0bcbd7b8766",
+                "label": null
+              }
+            ],
+            "input_connections": {},
+            "tool_state": "{\"collection_type\": \"list\"}",
+            "id": 1,
+            "uuid": "39604172-d784-43d4-9680-9eaf73f6627e",
+            "errors": null,
+            "name": "Input dataset collection",
+            "label": "Control Dam FASTQ",
+            "inputs": [],
+            "position": {
+              "top": 266.5,
+              "left": 216
+            },
+            "annotation": "",
+            "content_id": null,
+            "type": "data_collection_input"
+          },
+          "2": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+              {
+                "output_name": "output",
+                "uuid": "8ec561b6-f53b-4397-83ae-b7b76c500a85",
+                "label": null
+              }
+            ],
+            "input_connections": {},
+            "tool_state": "{}",
+            "id": 2,
+            "uuid": "7dd24eb6-d670-4a75-8f9f-401e21d45c49",
+            "errors": null,
+            "name": "Input dataset",
+            "label": "GFF file with GATC locations",
+            "inputs": [],
+            "position": {
+              "top": 344.5,
+              "left": 217
+            },
+            "annotation": "",
+            "content_id": null,
+            "type": "data_input"
+          },
+          "3": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damidseq_core/damidseq_core/0.1.5",
+            "tool_version": "0.1.5",
+            "outputs": [
+              {
+                "type": "bedgraph",
+                "name": "output_ratio"
+              },
+              {
+                "type": "bedgraph",
+                "name": "output_ratio_full"
+              },
+              {
+                "type": "bam",
+                "name": "control_output"
+              },
+              {
+                "type": "bam",
+                "name": "fusion_output"
+              }
+            ],
+            "workflow_outputs": [
+              {
+                "output_name": "control_output",
+                "uuid": "84cf1026-5be0-4387-bca8-bbda2278c7d0",
+                "label": "Control BAM"
+              },
+              {
+                "output_name": "fusion_output",
+                "uuid": "3d4fd1a0-b56f-4afe-9a98-93d9ce5e8e78",
+                "label": "Fusion BAM"
+              }
+            ],
+            "input_connections": {
+              "dam": {
+                "output_name": "output",
+                "id": 1
+              },
+              "dam_fusion": {
+                "output_name": "output",
+                "id": 0
+              },
+              "gatc_frag_file": {
+                "output_name": "output",
+                "id": 2
+              }
+            },
+            "tool_state": "{\"qscore1min\": \"\\\"0.4\\\"\", \"full_data_files\": \"\\\"false\\\"\", \"__page__\": null, \"reference_index\": \"\\\"dm6_no_decoy\\\"\", \"norm_steps\": \"\\\"300\\\"\", \"dam\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"output_format\": \"\\\"bedgraph\\\"\", \"norm_method\": \"\\\"kde\\\"\", \"len\": \"\\\"300\\\"\", \"q\": \"\\\"30\\\"\", \"min_norm_value\": \"\\\"-5.0\\\"\", \"extend_reads\": \"\\\"true\\\"\", \"__rerun_remap_job_id__\": null, \"gatc_frag_file\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"method_subtract\": \"\\\"false\\\"\", \"max_norm_value\": \"\\\"5.0\\\"\", \"bins\": \"\\\"75\\\"\", \"dam_fusion\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"extension_method\": \"\\\"gatc\\\"\", \"qscore1max\": \"\\\"1.0\\\"\", \"qscore2max\": \"\\\"0.9\\\"\"}",
+            "id": 3,
+            "tool_shed_repository": {
+              "owner": "mvdbeek",
+              "changeset_revision": "621837e9bfed",
+              "name": "damidseq_core",
+              "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "7394d802-47e2-41fc-afb1-6ae0ef61d0ef",
+            "errors": null,
+            "name": "damidseq",
+            "post_job_actions": {
+              "HideDatasetActionoutput_ratio": {
+                "output_name": "output_ratio",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              },
+              "DeleteIntermediatesActionoutput_ratio": {
+                "output_name": "output_ratio",
+                "action_type": "DeleteIntermediatesAction",
+                "action_arguments": {}
+              },
+              "HideDatasetActionoutput_ratio_full": {
+                "output_name": "output_ratio_full",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": null,
+            "inputs": [],
+            "position": {
+              "top": 175.5,
+              "left": 542
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damidseq_core/damidseq_core/0.1.5",
+            "type": "tool"
+          }
+        },
+        "annotation": "",
+        "a_galaxy_workflow": "true"
+      },
+      "workflow_outputs": [],
+      "input_connections": {
+        "GFF file with GATC locations": {
+          "input_subworkflow_step_id": 2,
+          "output_name": "output",
+          "id": 2
+        },
+        "Fusion Dam FASTQ": {
+          "input_subworkflow_step_id": 0,
+          "output_name": "output",
+          "id": 0
+        },
+        "Control Dam FASTQ": {
+          "input_subworkflow_step_id": 1,
+          "output_name": "output",
+          "id": 1
+        }
+      },
+      "id": 6,
+      "uuid": "9c079287-bf36-4310-a019-998d326cda6e",
+      "name": "DamID: Fastq to Alignment files",
+      "label": null,
+      "position": {
+        "top": 171.5,
+        "left": 882
+      },
+      "annotation": "",
+      "type": "subworkflow"
+    },
+    "7": {
+      "tool_id": "__RELABEL_FROM_FILE__",
+      "tool_version": "1.0.0",
+      "outputs": [
+        {
+          "type": "input",
+          "name": "output"
+        }
+      ],
+      "workflow_outputs": [],
+      "input_connections": {
+        "input": {
+          "output_name": "Control BAM",
+          "id": 6
+        },
+        "how|labels": {
+          "output_name": "output",
+          "id": 5
+        }
+      },
+      "tool_state": "{\"__page__\": null, \"how\": \"{\\\"__current_case__\\\": 0, \\\"how_select\\\": \\\"txt\\\", \\\"labels\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"strict\\\": \\\"false\\\"}\", \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\"}",
+      "id": 7,
+      "uuid": "2c2814f8-e32a-4d92-aa4f-8300735aea5e",
+      "errors": null,
+      "name": "Relabel List Identifiers",
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "output_name": "output",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        }
+      },
+      "label": null,
+      "inputs": [],
+      "position": {
+        "top": 382.5,
+        "left": 1181.5
+      },
+      "annotation": "",
+      "content_id": "__RELABEL_FROM_FILE__",
+      "type": "tool"
+    },
+    "8": {
+      "tool_id": "__MERGE_COLLECTION__",
+      "tool_version": "1.0.0",
+      "outputs": [
+        {
+          "type": "input",
+          "name": "output"
+        }
+      ],
+      "workflow_outputs": [],
+      "input_connections": {
+        "inputs_0|input": {
+          "output_name": "output",
+          "id": 7
+        },
+        "inputs_1|input": {
+          "output_name": "Fusion BAM",
+          "id": 6
+        }
+      },
+      "tool_state": "{\"inputs\": \"[{\\\"__index__\\\": 0, \\\"input\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}}, {\\\"__index__\\\": 1, \\\"input\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}}]\", \"__rerun_remap_job_id__\": null, \"advanced\": \"{\\\"conflict\\\": {\\\"__current_case__\\\": 3, \\\"duplicate_options\\\": \\\"keep_first\\\"}}\", \"__page__\": null}",
+      "id": 8,
+      "uuid": "701a44df-534c-4b42-9c62-1a1deba3a94e",
+      "errors": null,
+      "name": "Merge Collections",
+      "post_job_actions": {
+        "HideDatasetActionoutput": {
+          "output_name": "output",
+          "action_type": "HideDatasetAction",
+          "action_arguments": {}
+        }
+      },
+      "label": null,
+      "inputs": [],
+      "position": {
+        "top": 795.5,
+        "left": 993
+      },
+      "annotation": "",
+      "content_id": "__MERGE_COLLECTION__",
+      "type": "tool"
+    },
+    "9": {
+      "tool_id": "c17d251858f29a33",
+      "inputs": [],
+      "outputs": [],
+      "subworkflow": {
+        "uuid": "6e2d7512-cf8a-44da-8b30-3da8e30b939a",
+        "tags": "",
+        "format-version": "0.1",
+        "name": "DamID-GATC: Alignments to deseq2 result",
+        "steps": {
+          "0": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+              {
+                "output_name": "output",
+                "uuid": "0e72f6a1-2f53-444f-bc20-42b46b6bfcfd",
+                "label": null
+              }
+            ],
+            "input_connections": {},
+            "tool_state": "{}",
+            "id": 0,
+            "uuid": "661ee2d5-60b9-466b-925f-0747cdaa783f",
+            "errors": null,
+            "name": "Input dataset",
+            "label": "mappable GATC sites in bed format",
+            "inputs": [],
+            "position": {
+              "top": 441.84375,
+              "left": 239.96875
+            },
+            "annotation": "Contains all the GATC sites that are not in repetitive regions. Should be in G BED format",
+            "content_id": null,
+            "type": "data_input"
+          },
+          "1": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+              {
+                "output_name": "output",
+                "uuid": "50460b64-d843-4ca8-86cf-b3618e32cead",
+                "label": null
+              }
+            ],
+            "input_connections": {},
+            "tool_state": "{\"collection_type\": \"list\"}",
+            "id": 1,
+            "uuid": "4982df16-06cc-46c7-8dea-5fac98a30128",
+            "errors": null,
+            "name": "Input dataset collection",
+            "label": "DamID alignment files",
+            "inputs": [],
+            "position": {
+              "top": 536.359375,
+              "left": 239.96875
+            },
+            "annotation": "DamID alignment files",
+            "content_id": null,
+            "type": "data_collection_input"
+          },
+          "2": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+              {
+                "output_name": "output",
+                "uuid": "591777ee-5f9b-4206-ace8-b7174b0ea397",
+                "label": null
+              }
+            ],
+            "input_connections": {},
+            "tool_state": "{}",
+            "id": 2,
+            "uuid": "6653ce2b-55e3-4af2-9c5e-6dee255940b7",
+            "errors": null,
+            "name": "Input dataset",
+            "label": "List with control identifiers",
+            "inputs": [],
+            "position": {
+              "top": 612.875,
+              "left": 1338.890625
+            },
+            "annotation": "List all control identifiers, e.g\nDam-only-1\nDam-only-2\nDam-only-3",
+            "content_id": null,
+            "type": "data_input"
+          },
+          "3": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+              {
+                "output_name": "output",
+                "uuid": "1f743167-8c71-493f-813e-548018093402",
+                "label": null
+              }
+            ],
+            "input_connections": {},
+            "tool_state": "{}",
+            "id": 3,
+            "uuid": "0e3e9a6b-7ed6-4b06-aa25-315d4d91d860",
+            "errors": null,
+            "name": "Input dataset",
+            "label": "gene model",
+            "inputs": [],
+            "position": {
+              "top": 745.203125,
+              "left": 1272.28125
+            },
+            "annotation": "GT",
+            "content_id": null,
+            "type": "data_input"
+          },
+          "4": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_coveragebed/2.27.1",
+            "tool_version": "2.27.1",
+            "outputs": [
+              {
+                "type": "bed",
+                "name": "output"
+              }
+            ],
+            "workflow_outputs": [],
+            "input_connections": {
+              "inputA": {
+                "output_name": "output",
+                "id": 0
+              },
+              "reduce_or_iterate|inputB": {
+                "output_name": "output",
+                "id": 1
+              }
+            },
+            "tool_state": "{\"__page__\": null, \"overlap_a\": \"\\\"\\\"\", \"d\": \"\\\"false\\\"\", \"a_or_b\": \"\\\"false\\\"\", \"overlap_b\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"hist\": \"\\\"false\\\"\", \"inputA\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"reduce_or_iterate\": \"{\\\"__current_case__\\\": 0, \\\"inputB\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"reduce_or_iterate_selector\\\": \\\"iterate\\\"}\", \"split\": \"\\\"false\\\"\", \"strandedness\": \"\\\"false\\\"\", \"reciprocal_overlap\": \"\\\"false\\\"\"}",
+            "id": 4,
+            "tool_shed_repository": {
+              "owner": "iuc",
+              "changeset_revision": "87ee588b3d45",
+              "name": "bedtools",
+              "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "46587403-5af8-451f-b959-e64c134aa19e",
+            "errors": null,
+            "name": "bedtools Compute both the depth and breadth of coverage",
+            "post_job_actions": {
+              "HideDatasetActionoutput": {
+                "output_name": "output",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": null,
+            "inputs": [],
+            "position": {
+              "top": 380.640625,
+              "left": 484.875
+            },
+            "annotation": "Count the reads overlapping GATC sites",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_coveragebed/2.27.1",
+            "type": "tool"
+          },
+          "5": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/kellrott/regex_replace/regex_replace/1.0.0",
+            "tool_version": "1.0.0",
+            "outputs": [
+              {
+                "type": "input",
+                "name": "outfile"
+              }
+            ],
+            "workflow_outputs": [],
+            "input_connections": {
+              "infile": {
+                "output_name": "output",
+                "id": 4
+              }
+            },
+            "tool_state": "{\"__page__\": null, \"ignore_case\": \"\\\"false\\\"\", \"search_str\": \"\\\"(.*?)\\\\\\\\t(.*?)\\\\\\\\t(.*?)\\\\\\\\t(.*?)\\\\\\\\t.*\\\"\", \"__rerun_remap_job_id__\": null, \"replace_str\": \"\\\"\\\\\\\\1_\\\\\\\\2_\\\\\\\\3\\\\\\\\t\\\\\\\\4\\\"\", \"replace_count\": \"\\\"0\\\"\", \"multiline\": \"\\\"false\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"dot_all\": \"\\\"false\\\"\"}",
+            "id": 5,
+            "tool_shed_repository": {
+              "owner": "kellrott",
+              "changeset_revision": "9a77d5fca67c",
+              "name": "regex_replace",
+              "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "8c5ee2dd-89f7-4b44-a318-b9e3c3693a0e",
+            "errors": null,
+            "name": "Regex Replace",
+            "post_job_actions": {
+              "HideDatasetActionoutfile": {
+                "output_name": "outfile",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": null,
+            "inputs": [],
+            "position": {
+              "top": 441.84375,
+              "left": 793.625
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/kellrott/regex_replace/regex_replace/1.0.0",
+            "type": "tool"
+          },
+          "6": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/concatenate_multiple_datasets/cat_multiple/0.2",
+            "tool_version": "0.2",
+            "outputs": [
+              {
+                "type": "input",
+                "name": "out_file1"
+              }
+            ],
+            "workflow_outputs": [],
+            "input_connections": {
+              "input": {
+                "output_name": "outfile",
+                "id": 5
+              }
+            },
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/data/users/mvandenb/gx124/data/gx/tool-data/dm6_no_decoy/len/dm6_no_decoy.len\\\"\", \"__page__\": null}",
+            "id": 6,
+            "tool_shed_repository": {
+              "owner": "mvdbeek",
+              "changeset_revision": "201c568972c3",
+              "name": "concatenate_multiple_datasets",
+              "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "3f14674e-576b-4421-a597-f2e0471543cd",
+            "errors": null,
+            "name": "Concatenate multiple datasets",
+            "post_job_actions": {
+              "HideDatasetActionout_file1": {
+                "output_name": "out_file1",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": null,
+            "inputs": [],
+            "position": {
+              "top": 441.84375,
+              "left": 1009.65625
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/concatenate_multiple_datasets/cat_multiple/0.2",
+            "type": "tool"
+          },
+          "7": {
+            "tool_id": "Grouping1",
+            "tool_version": "2.1.2",
+            "outputs": [
+              {
+                "type": "tabular",
+                "name": "out_file1"
+              }
+            ],
+            "workflow_outputs": [],
+            "input_connections": {
+              "input1": {
+                "output_name": "out_file1",
+                "id": 6
+              }
+            },
+            "tool_state": "{\"operations\": \"[{\\\"__index__\\\": 0, \\\"opcol\\\": \\\"2\\\", \\\"opdefault\\\": \\\"\\\", \\\"opround\\\": \\\"no\\\", \\\"optype\\\": \\\"mean\\\"}]\", \"__page__\": null, \"input1\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"ignorelines\": \"null\", \"groupcol\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"ignorecase\": \"\\\"false\\\"\"}",
+            "id": 7,
+            "uuid": "dfac2e40-cf63-41f6-bb0d-41fc6d2e1f9d",
+            "errors": null,
+            "name": "Group",
+            "post_job_actions": {
+              "HideDatasetActionout_file1": {
+                "output_name": "out_file1",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": "mean GATC counts",
+            "inputs": [],
+            "position": {
+              "top": 290.640625,
+              "left": 1325.484375
+            },
+            "annotation": "Calculate mean GATC counts",
+            "content_id": "Grouping1",
+            "type": "tool"
+          },
+          "8": {
+            "tool_id": "Filter1",
+            "tool_version": "1.1.0",
+            "outputs": [
+              {
+                "type": "input",
+                "name": "out_file1"
+              }
+            ],
+            "workflow_outputs": [],
+            "input_connections": {
+              "input": {
+                "output_name": "out_file1",
+                "id": 7
+              }
+            },
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"header_lines\": \"\\\"0\\\"\", \"cond\": \"\\\"c2>=5\\\"\", \"__page__\": null}",
+            "id": 8,
+            "uuid": "b706231f-59ab-421b-a74c-8e1d02396145",
+            "errors": null,
+            "name": "Filter",
+            "post_job_actions": {
+              "HideDatasetActionout_file1": {
+                "output_name": "out_file1",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": "Filter to include GATC sites with > 5 reads on average",
+            "inputs": [],
+            "position": {
+              "top": 287.9375,
+              "left": 1551.484375
+            },
+            "annotation": "Filter to include GATC sites with &gt; 5 reads on average",
+            "content_id": "Filter1",
+            "type": "tool"
+          },
+          "9": {
+            "tool_id": "comp1",
+            "tool_version": "1.0.2",
+            "outputs": [
+              {
+                "type": "input",
+                "name": "out_file1"
+              }
+            ],
+            "workflow_outputs": [],
+            "input_connections": {
+              "input2": {
+                "output_name": "out_file1",
+                "id": 8
+              },
+              "input1": {
+                "output_name": "outfile",
+                "id": 5
+              }
+            },
+            "tool_state": "{\"input2\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__page__\": null, \"input1\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"field2\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"field1\": \"\\\"1\\\"\", \"mode\": \"\\\"N\\\"\"}",
+            "id": 9,
+            "uuid": "73390914-0c09-4359-81f7-3b99367241f0",
+            "errors": null,
+            "name": "Compare two Datasets",
+            "post_job_actions": {
+              "HideDatasetActionout_file1": {
+                "output_name": "out_file1",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": "Exclude GATC sites with too few counts",
+            "inputs": [],
+            "position": {
+              "top": 365.21875,
+              "left": 1758.484375
+            },
+            "annotation": "Exclude GATC sites with too few counts",
+            "content_id": "comp1",
+            "type": "tool"
+          },
+          "10": {
+            "tool_id": "__FILTER_FROM_FILE__",
+            "tool_version": "1.0.0",
+            "outputs": [
+              {
+                "type": "input",
+                "name": "output_filtered"
+              },
+              {
+                "type": "input",
+                "name": "output_discarded"
+              }
+            ],
+            "workflow_outputs": [],
+            "input_connections": {
+              "how|filter_source": {
+                "output_name": "output",
+                "id": 2
+              },
+              "input": {
+                "output_name": "out_file1",
+                "id": 9
+              }
+            },
+            "tool_state": "{\"__page__\": null, \"how\": \"{\\\"__current_case__\\\": 0, \\\"filter_source\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"how_filter\\\": \\\"remove_if_absent\\\"}\", \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\"}",
+            "id": 10,
+            "uuid": "7eac426a-4efa-4e9b-a43f-2320adbe2b64",
+            "errors": null,
+            "name": "Filter List",
+            "post_job_actions": {
+              "ChangeDatatypeActionoutput_discarded": {
+                "output_name": "output_discarded",
+                "action_type": "ChangeDatatypeAction",
+                "action_arguments": {
+                  "newtype": "tabular"
+                }
+              },
+              "HideDatasetActionoutput_discarded": {
+                "output_name": "output_discarded",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              },
+              "HideDatasetActionoutput_filtered": {
+                "output_name": "output_filtered",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              },
+              "ChangeDatatypeActionoutput_filtered": {
+                "output_name": "output_filtered",
+                "action_type": "ChangeDatatypeAction",
+                "action_arguments": {
+                  "newtype": "tabular"
+                }
+              }
+            },
+            "label": "Split into fusion and control",
+            "inputs": [],
+            "position": {
+              "top": 398.328125,
+              "left": 2007.8125
+            },
+            "annotation": "Split into fusion and control",
+            "content_id": "__FILTER_FROM_FILE__",
+            "type": "tool"
+          },
+          "11": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.2",
+            "tool_version": "2.11.40.2",
+            "outputs": [
+              {
+                "type": "input",
+                "name": "split_output"
+              },
+              {
+                "type": "tabular",
+                "name": "deseq_out"
+              },
+              {
+                "type": "pdf",
+                "name": "plots"
+              },
+              {
+                "type": "tabular",
+                "name": "counts_out"
+              }
+            ],
+            "workflow_outputs": [
+              {
+                "output_name": "deseq_out",
+                "uuid": "2b53ca1d-f762-46a7-b08c-91b4402cdbe1",
+                "label": "DESEQ2 GATC table"
+              }
+            ],
+            "input_connections": {
+              "rep_factorName_0|rep_factorLevel_0|countsFile": {
+                "output_name": "output_discarded",
+                "id": 10
+              },
+              "rep_factorName_0|rep_factorLevel_1|countsFile": {
+                "output_name": "output_filtered",
+                "id": 10
+              }
+            },
+            "tool_state": "{\"fit_type\": \"\\\"1\\\"\", \"__page__\": null, \"tximport\": \"{\\\"__current_case__\\\": 1, \\\"tximport_selector\\\": \\\"count\\\"}\", \"outlier_replace_off\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"auto_mean_filter_off\": \"\\\"false\\\"\", \"header\": \"\\\"false\\\"\", \"rep_factorName\": \"[{\\\"__index__\\\": 0, \\\"factorName\\\": \\\"DamID\\\", \\\"rep_factorLevel\\\": [{\\\"__index__\\\": 0, \\\"countsFile\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"factorLevel\\\": \\\"Fusion\\\"}, {\\\"__index__\\\": 1, \\\"countsFile\\\": {\\\"__class__\\\": \\\"ConnectedValue\\\"}, \\\"factorLevel\\\": \\\"Control\\\"}]}]\", \"normCounts\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"outlier_filter_off\": \"\\\"false\\\"\", \"many_contrasts\": \"\\\"false\\\"\", \"batch_factors\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"pdf\": \"\\\"false\\\"\"}",
+            "id": 11,
+            "tool_shed_repository": {
+              "owner": "iuc",
+              "changeset_revision": "d9e5cadc7f0b",
+              "name": "deseq2",
+              "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "6d9b7099-a0ad-4d82-bdb2-a84074ccfe49",
+            "errors": null,
+            "name": "DESeq2",
+            "post_job_actions": {
+              "HideDatasetActionplots": {
+                "output_name": "plots",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              },
+              "HideDatasetActionsplit_output": {
+                "output_name": "split_output",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              },
+              "HideDatasetActioncounts_out": {
+                "output_name": "counts_out",
+                "action_type": "HideDatasetAction",
+                "action_arguments": {}
+              }
+            },
+            "label": null,
+            "inputs": [
+              {
+                "name": "normCounts",
+                "description": "runtime parameter for tool DESeq2"
+              },
+              {
+                "name": "batch_factors",
+                "description": "runtime parameter for tool DESeq2"
+              }
+            ],
+            "position": {
+              "top": 392.8125,
+              "left": 2284.65625
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.2",
+            "type": "tool"
+          },
+          "12": {
+            "tool_id": "50b885d58371e713",
+            "inputs": [],
+            "outputs": [],
+            "subworkflow": {
+              "uuid": "0ebffaaa-f206-45af-a458-93fdd7bdec79",
+              "tags": "",
+              "format-version": "0.1",
+              "name": "DamID-GATC: deseq2 to bed",
+              "steps": {
+                "0": {
+                  "tool_id": null,
+                  "tool_version": null,
+                  "outputs": [],
+                  "workflow_outputs": [
+                    {
+                      "output_name": "output",
+                      "uuid": "d689f2b4-fdfa-4dad-a975-21751c57f640",
+                      "label": null
+                    }
+                  ],
+                  "input_connections": {},
+                  "tool_state": "{}",
+                  "id": 0,
+                  "uuid": "5d190cc3-3da3-46e9-8a4a-3a0aeac21d7d",
+                  "errors": null,
+                  "name": "Input dataset",
+                  "label": "Deseq2 result file",
+                  "inputs": [],
+                  "position": {
+                    "top": 303.484375,
+                    "left": 587.5
+                  },
+                  "annotation": "",
+                  "content_id": null,
+                  "type": "data_input"
+                },
+                "1": {
+                  "tool_id": "Filter1",
+                  "tool_version": "1.1.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "out_file1"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "input": {
+                      "output_name": "output",
+                      "id": 0
+                    }
+                  },
+                  "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"header_lines\": \"\\\"0\\\"\", \"cond\": \"\\\"c3>=0\\\"\", \"__page__\": null}",
+                  "id": 1,
+                  "uuid": "e1091a77-9082-4594-9cac-9b8ea7c4fd93",
+                  "errors": null,
+                  "name": "Filter",
+                  "post_job_actions": {
+                    "HideDatasetActionout_file1": {
+                      "output_name": "out_file1",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    }
+                  },
+                  "label": "Filter to signigficant bound peaks",
+                  "inputs": [],
+                  "position": {
+                    "top": 274.484375,
+                    "left": 992.46875
+                  },
+                  "annotation": "Need to be signigicant and bound (log2FC &gt; 0)",
+                  "content_id": "Filter1",
+                  "type": "tool"
+                },
+                "2": {
+                  "tool_id": "toolshed.g2.bx.psu.edu/repos/kellrott/regex_replace/regex_replace/1.0.0",
+                  "tool_version": "1.0.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "outfile"
+                    }
+                  ],
+                  "workflow_outputs": [
+                    {
+                      "output_name": "outfile",
+                      "uuid": "11bf2383-a2f2-4b0e-bfa7-74fadc971c4b",
+                      "label": "significant GATCs in bed format"
+                    }
+                  ],
+                  "input_connections": {
+                    "infile": {
+                      "output_name": "out_file1",
+                      "id": 1
+                    }
+                  },
+                  "tool_state": "{\"__page__\": null, \"ignore_case\": \"\\\"false\\\"\", \"search_str\": \"\\\"(.*?)_(.*?)_(.*?)\\\"\", \"__rerun_remap_job_id__\": null, \"replace_str\": \"\\\"\\\\\\\\1\\\\\\\\t\\\\\\\\2\\\\\\\\t\\\\\\\\3\\\"\", \"replace_count\": \"\\\"0\\\"\", \"multiline\": \"\\\"false\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"dot_all\": \"\\\"false\\\"\"}",
+                  "id": 2,
+                  "tool_shed_repository": {
+                    "owner": "kellrott",
+                    "changeset_revision": "9a77d5fca67c",
+                    "name": "regex_replace",
+                    "tool_shed": "toolshed.g2.bx.psu.edu"
+                  },
+                  "uuid": "ad84a38d-5953-4f9b-86d8-e246475caeec",
+                  "errors": null,
+                  "name": "Regex Replace",
+                  "post_job_actions": {
+                    "ChangeDatatypeActionoutfile": {
+                      "output_name": "outfile",
+                      "action_type": "ChangeDatatypeAction",
+                      "action_arguments": {
+                        "newtype": "bed"
+                      }
+                    }
+                  },
+                  "label": "deseq2 significant to bed file",
+                  "inputs": [],
+                  "position": {
+                    "top": 365.484375,
+                    "left": 1317.5
+                  },
+                  "annotation": "",
+                  "content_id": "toolshed.g2.bx.psu.edu/repos/kellrott/regex_replace/regex_replace/1.0.0",
+                  "type": "tool"
+                }
+              },
+              "annotation": "",
+              "a_galaxy_workflow": "true"
+            },
+            "workflow_outputs": [],
+            "input_connections": {
+              "Deseq2 result file": {
+                "input_subworkflow_step_id": 0,
+                "output_name": "deseq_out",
+                "id": 11
+              }
+            },
+            "id": 12,
+            "uuid": "7280d98f-0b64-4769-a9a1-0ecf50333165",
+            "name": "DamID-GATC: deseq2 to bed",
+            "label": null,
+            "position": {
+              "top": 598.5,
+              "left": 1890.5
+            },
+            "annotation": "",
+            "type": "subworkflow"
+          },
+          "13": {
+            "tool_id": "0d31124a89b31301",
+            "inputs": [],
+            "outputs": [],
+            "subworkflow": {
+              "uuid": "903c5929-37c7-437c-b4b0-a87cf57b440c",
+              "tags": "",
+              "format-version": "0.1",
+              "name": "DamID-GATC: consecutive peaks over gene",
+              "steps": {
+                "0": {
+                  "tool_id": null,
+                  "tool_version": null,
+                  "outputs": [],
+                  "workflow_outputs": [
+                    {
+                      "output_name": "output",
+                      "uuid": "2426bd43-a384-4e72-9268-d4de0e48251a",
+                      "label": null
+                    }
+                  ],
+                  "input_connections": {},
+                  "tool_state": "{}",
+                  "id": 0,
+                  "uuid": "c4e5a8ff-6385-4058-adec-ca0c5323b3cc",
+                  "errors": null,
+                  "name": "Input dataset",
+                  "label": "deseq2 bed file",
+                  "inputs": [],
+                  "position": {
+                    "top": 348,
+                    "left": 200
+                  },
+                  "annotation": "",
+                  "content_id": null,
+                  "type": "data_input"
+                },
+                "1": {
+                  "tool_id": null,
+                  "tool_version": null,
+                  "outputs": [],
+                  "workflow_outputs": [
+                    {
+                      "output_name": "output",
+                      "uuid": "c54cc0a4-556d-49a0-869a-f4ff02094c8c",
+                      "label": null
+                    }
+                  ],
+                  "input_connections": {},
+                  "tool_state": "{}",
+                  "id": 1,
+                  "uuid": "9655aa12-fdf3-4d58-be50-51ee32b9e42e",
+                  "errors": null,
+                  "name": "Input dataset",
+                  "label": "Gene Model GTF/GFF",
+                  "inputs": [],
+                  "position": {
+                    "top": 436,
+                    "left": 200
+                  },
+                  "annotation": "",
+                  "content_id": null,
+                  "type": "data_input"
+                },
+                "2": {
+                  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_sortbed/2.27.0.0",
+                  "tool_version": "2.27.0.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "output"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "input": {
+                      "output_name": "output",
+                      "id": 0
+                    }
+                  },
+                  "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option\": \"\\\"\\\"\", \"__page__\": null}",
+                  "id": 2,
+                  "tool_shed_repository": {
+                    "owner": "iuc",
+                    "changeset_revision": "a33db97b220c",
+                    "name": "bedtools",
+                    "tool_shed": "toolshed.g2.bx.psu.edu"
+                  },
+                  "uuid": "3f1269fe-cb9c-4496-ba8d-d82efd117ebb",
+                  "errors": null,
+                  "name": "SortBED",
+                  "post_job_actions": {
+                    "HideDatasetActionoutput": {
+                      "output_name": "output",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    }
+                  },
+                  "label": null,
+                  "inputs": [],
+                  "position": {
+                    "top": 348,
+                    "left": 445
+                  },
+                  "annotation": "",
+                  "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_sortbed/2.27.0.0",
+                  "type": "tool"
+                },
+                "3": {
+                  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_sortbed/2.27.0.0",
+                  "tool_version": "2.27.0.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "output"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "input": {
+                      "output_name": "output",
+                      "id": 1
+                    }
+                  },
+                  "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"option\": \"\\\"\\\"\", \"__page__\": null}",
+                  "id": 3,
+                  "tool_shed_repository": {
+                    "owner": "iuc",
+                    "changeset_revision": "a33db97b220c",
+                    "name": "bedtools",
+                    "tool_shed": "toolshed.g2.bx.psu.edu"
+                  },
+                  "uuid": "2a89adba-c014-4143-b0f1-e719382ee4a2",
+                  "errors": null,
+                  "name": "SortBED",
+                  "post_job_actions": {
+                    "HideDatasetActionoutput": {
+                      "output_name": "output",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    }
+                  },
+                  "label": null,
+                  "inputs": [],
+                  "position": {
+                    "top": 485,
+                    "left": 445
+                  },
+                  "annotation": "",
+                  "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_sortbed/2.27.0.0",
+                  "type": "tool"
+                },
+                "4": {
+                  "tool_id": "Filter1",
+                  "tool_version": "1.1.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "out_file1"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "input": {
+                      "output_name": "output",
+                      "id": 3
+                    }
+                  },
+                  "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"header_lines\": \"\\\"0\\\"\", \"cond\": \"\\\"c3=='gene'\\\"\", \"__page__\": null}",
+                  "id": 4,
+                  "uuid": "2e545d74-5604-4da4-a9ad-a94b04d35eb6",
+                  "errors": null,
+                  "name": "Filter",
+                  "post_job_actions": {
+                    "HideDatasetActionout_file1": {
+                      "output_name": "out_file1",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    }
+                  },
+                  "label": null,
+                  "inputs": [],
+                  "position": {
+                    "top": 348,
+                    "left": 773
+                  },
+                  "annotation": "",
+                  "content_id": "Filter1",
+                  "type": "tool"
+                },
+                "5": {
+                  "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_map/2.27.0.0",
+                  "tool_version": "2.27.0.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "output"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "inputB": {
+                      "output_name": "out_file1",
+                      "id": 4
+                    },
+                    "inputA": {
+                      "output_name": "output",
+                      "id": 2
+                    }
+                  },
+                  "tool_state": "{\"__page__\": null, \"reciprocal\": \"\\\"false\\\"\", \"__rerun_remap_job_id__\": null, \"overlap\": \"\\\"1e-09\\\"\", \"inputB\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"header\": \"\\\"false\\\"\", \"inputA\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"genome\": \"{\\\"__current_case__\\\": 1, \\\"genome_choose\\\": \\\"\\\"}\", \"c_and_o_argument_repeat\": \"[{\\\"__index__\\\": 0, \\\"col\\\": \\\"9\\\", \\\"operation\\\": \\\"concat\\\"}]\", \"strand\": \"\\\"\\\"\", \"split\": \"\\\"false\\\"\"}",
+                  "id": 5,
+                  "tool_shed_repository": {
+                    "owner": "iuc",
+                    "changeset_revision": "a33db97b220c",
+                    "name": "bedtools",
+                    "tool_shed": "toolshed.g2.bx.psu.edu"
+                  },
+                  "uuid": "45e62efd-4c7f-4adf-8b15-55a0479039de",
+                  "errors": null,
+                  "name": "MapBed",
+                  "post_job_actions": {
+                    "HideDatasetActionoutput": {
+                      "output_name": "output",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    }
+                  },
+                  "label": null,
+                  "inputs": [],
+                  "position": {
+                    "top": 348,
+                    "left": 1018
+                  },
+                  "annotation": "",
+                  "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_map/2.27.0.0",
+                  "type": "tool"
+                },
+                "6": {
+                  "tool_id": "toolshed.g2.bx.psu.edu/repos/kellrott/regex_replace/regex_replace/1.0.0",
+                  "tool_version": "1.0.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "outfile"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "infile": {
+                      "output_name": "output",
+                      "id": 5
+                    }
+                  },
+                  "tool_state": "{\"__page__\": null, \"ignore_case\": \"\\\"false\\\"\", \"search_str\": \"\\\"(.*?)ID=(.*?);.*\\\"\", \"__rerun_remap_job_id__\": null, \"replace_str\": \"\\\"\\\\\\\\1\\\\\\\\2\\\"\", \"replace_count\": \"\\\"0\\\"\", \"multiline\": \"\\\"false\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"dot_all\": \"\\\"false\\\"\"}",
+                  "id": 6,
+                  "tool_shed_repository": {
+                    "owner": "kellrott",
+                    "changeset_revision": "9a77d5fca67c",
+                    "name": "regex_replace",
+                    "tool_shed": "toolshed.g2.bx.psu.edu"
+                  },
+                  "uuid": "5a8786d0-f453-4087-9e09-1398ed2808f6",
+                  "errors": null,
+                  "name": "Regex Replace",
+                  "post_job_actions": {
+                    "HideDatasetActionoutfile": {
+                      "output_name": "outfile",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    },
+                    "ChangeDatatypeActionoutfile": {
+                      "output_name": "outfile",
+                      "action_type": "ChangeDatatypeAction",
+                      "action_arguments": {
+                        "newtype": "tabular"
+                      }
+                    }
+                  },
+                  "label": "replace atributes with FBgn",
+                  "inputs": [],
+                  "position": {
+                    "top": 348,
+                    "left": 1320
+                  },
+                  "annotation": "",
+                  "content_id": "toolshed.g2.bx.psu.edu/repos/kellrott/regex_replace/regex_replace/1.0.0",
+                  "type": "tool"
+                },
+                "7": {
+                  "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damidseq_consecutive_peaks/consecutive_peaks/0.1.0",
+                  "tool_version": "0.1.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "output_file"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "input_file": {
+                      "output_name": "outfile",
+                      "id": 6
+                    }
+                  },
+                  "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_file\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"groupby\": \"\\\"c9\\\"\", \"padj_column\": \"\\\"c8\\\"\"}",
+                  "id": 7,
+                  "tool_shed_repository": {
+                    "owner": "mvdbeek",
+                    "changeset_revision": "f3ca59e53b73",
+                    "name": "damidseq_consecutive_peaks",
+                    "tool_shed": "toolshed.g2.bx.psu.edu"
+                  },
+                  "uuid": "4db9e83f-d6f9-4ee8-98af-3f5d20786ef3",
+                  "errors": null,
+                  "name": "Consecutive peaks",
+                  "post_job_actions": {
+                    "HideDatasetActionoutput_file": {
+                      "output_name": "output_file",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    }
+                  },
+                  "label": null,
+                  "inputs": [],
+                  "position": {
+                    "top": 348,
+                    "left": 1565
+                  },
+                  "annotation": "",
+                  "content_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damidseq_consecutive_peaks/consecutive_peaks/0.1.0",
+                  "type": "tool"
+                },
+                "8": {
+                  "tool_id": "sort1",
+                  "tool_version": "1.1.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "out_file1"
+                    }
+                  ],
+                  "workflow_outputs": [],
+                  "input_connections": {
+                    "input": {
+                      "output_name": "output_file",
+                      "id": 7
+                    }
+                  },
+                  "tool_state": "{\"__page__\": null, \"style\": \"\\\"gennum\\\"\", \"column\": \"\\\"10\\\"\", \"__rerun_remap_job_id__\": null, \"column_set\": \"[]\", \"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"header_lines\": \"\\\"0\\\"\", \"order\": \"\\\"ASC\\\"\"}",
+                  "id": 8,
+                  "uuid": "ce826a8d-70bc-45cb-bd42-80588127b237",
+                  "errors": null,
+                  "name": "Sort",
+                  "post_job_actions": {
+                    "HideDatasetActionout_file1": {
+                      "output_name": "out_file1",
+                      "action_type": "HideDatasetAction",
+                      "action_arguments": {}
+                    }
+                  },
+                  "label": null,
+                  "inputs": [],
+                  "position": {
+                    "top": 348,
+                    "left": 1827
+                  },
+                  "annotation": "",
+                  "content_id": "sort1",
+                  "type": "tool"
+                },
+                "9": {
+                  "tool_id": "Filter1",
+                  "tool_version": "1.1.0",
+                  "outputs": [
+                    {
+                      "type": "input",
+                      "name": "out_file1"
+                    }
+                  ],
+                  "workflow_outputs": [
+                    {
+                      "output_name": "out_file1",
+                      "uuid": "522cc047-5755-42e4-a4c5-55e59f7282fc",
+                      "label": "Genes with significant consecutive peaks"
+                    }
+                  ],
+                  "input_connections": {
+                    "input": {
+                      "output_name": "out_file1",
+                      "id": 8
+                    }
+                  },
+                  "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"header_lines\": \"\\\"0\\\"\", \"cond\": \"\\\"c12 > 1 and c11 != '.' and c10 < 0.01\\\"\", \"__page__\": null}",
+                  "id": 9,
+                  "uuid": "cff77dc8-423f-4fe1-95ff-7dd25d8ccb99",
+                  "errors": null,
+                  "name": "Filter",
+                  "post_job_actions": {},
+                  "label": null,
+                  "inputs": [],
+                  "position": {
+                    "top": 389.5,
+                    "left": 2148
+                  },
+                  "annotation": "",
+                  "content_id": "Filter1",
+                  "type": "tool"
+                }
+              },
+              "annotation": "",
+              "a_galaxy_workflow": "true"
+            },
+            "workflow_outputs": [
+              {
+                "output_name": "1:output",
+                "uuid": "d7084897-6ce9-4af3-9023-21849ea621af",
+                "label": null
+              },
+              {
+                "output_name": "Genes with significant consecutive peaks",
+                "uuid": "5b810d1c-862e-4b72-a220-41fb99fd3259",
+                "label": null
+              },
+              {
+                "output_name": "0:output",
+                "uuid": "64768133-8c86-42fb-89c2-75daa6f5d133",
+                "label": null
+              }
+            ],
+            "input_connections": {
+              "Gene Model GTF/GFF": {
+                "input_subworkflow_step_id": 1,
+                "output_name": "output",
+                "id": 3
+              },
+              "deseq2 bed file": {
+                "input_subworkflow_step_id": 0,
+                "output_name": "significant GATCs in bed format",
+                "id": 12
+              }
+            },
+            "id": 13,
+            "uuid": "d4957249-66c9-4790-9908-db567ecd215f",
+            "name": "DamID-GATC: consecutive peaks over gene",
+            "label": null,
+            "position": {
+              "top": 708,
+              "left": 1796.5
+            },
+            "annotation": "",
+            "type": "subworkflow"
+          }
+        },
+        "annotation": "",
+        "a_galaxy_workflow": "true"
+      },
+      "workflow_outputs": [
+        {
+          "output_name": "13:Genes with significant consecutive peaks",
+          "uuid": "a54ec5aa-cb4c-4114-b97d-572db7ed33b7",
+          "label": null
+        },
+        {
+          "output_name": "DESEQ2 GATC table",
+          "uuid": "79b39a6a-e8d2-48e4-a20c-dbe82f5c5ef5",
+          "label": null
+        }
+      ],
+      "input_connections": {
+        "mappable GATC sites in bed format": {
+          "input_subworkflow_step_id": 0,
+          "output_name": "output",
+          "id": 4
+        },
+        "List with control identifiers": {
+          "input_subworkflow_step_id": 2,
+          "output_name": "output",
+          "id": 5
+        },
+        "DamID alignment files": {
+          "input_subworkflow_step_id": 1,
+          "output_name": "output",
+          "id": 8
+        },
+        "gene model": {
+          "input_subworkflow_step_id": 3,
+          "output_name": "output",
+          "id": 3
+        }
+      },
+      "id": 9,
+      "uuid": "9a7a8874-494a-4594-bff6-f03b61a0184d",
+      "name": "DamID-GATC: Alignments to deseq2 result",
+      "label": null,
+      "position": {
+        "top": 348,
+        "left": 1601
+      },
+      "annotation": "",
+      "type": "subworkflow"
+    },
+    "10": {
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damid_deseq2_to_bedgraph/damid_interpolate/0.1.0",
+      "tool_version": "0.1.0",
+      "outputs": [
+        {
+          "type": "bedgraph",
+          "name": "output"
+        }
+      ],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "0a6a8733-3a86-43d8-a1af-6bc8910d0a38",
+          "label": null
+        }
+      ],
+      "input_connections": {
+        "input": {
+          "output_name": "DESEQ2 GATC table",
+          "id": 9
+        }
+      },
+      "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"resolution\": \"\\\"50\\\"\", \"__page__\": null}",
+      "id": 10,
+      "tool_shed_repository": {
+        "owner": "mvdbeek",
+        "changeset_revision": "210b7f4c9acb",
+        "name": "damid_deseq2_to_bedgraph",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "uuid": "c231632c-eb88-45c3-9677-3f2d78d25d47",
+      "errors": null,
+      "name": "Interpolate GATC signal",
+      "post_job_actions": {},
+      "label": null,
+      "inputs": [],
+      "position": {
+        "top": 999.5,
+        "left": 1505.5
+      },
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damid_deseq2_to_bedgraph/damid_interpolate/0.1.0",
+      "type": "tool"
+    },
+    "11": {
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damid_deseq2_to_peaks/damid_deseq2_to_peaks/0.1.0",
+      "tool_version": "0.1.0",
+      "outputs": [
+        {
+          "type": "bed",
+          "name": "output"
+        }
+      ],
+      "workflow_outputs": [
+        {
+          "output_name": "output",
+          "uuid": "95745a54-f063-41e5-8119-47cd16b9b5b1",
+          "label": null
+        }
+      ],
+      "input_connections": {
+        "input": {
+          "output_name": "DESEQ2 GATC table",
+          "id": 9
+        }
+      },
+      "tool_state": "{\"p_value_cutoff\": \"\\\"0.01\\\"\", \"input\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": null}",
+      "id": 11,
+      "tool_shed_repository": {
+        "owner": "mvdbeek",
+        "changeset_revision": "edca422b6cd6",
+        "name": "damid_deseq2_to_peaks",
+        "tool_shed": "toolshed.g2.bx.psu.edu"
+      },
+      "uuid": "65b23c3b-914d-46ef-819e-43d8845962a2",
+      "errors": null,
+      "name": "DamID deseq2 to peaks",
+      "post_job_actions": {},
+      "label": null,
+      "inputs": [],
+      "position": {
+        "top": 1136.5,
+        "left": 1502
+      },
+      "annotation": "",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/damid_deseq2_to_peaks/damid_deseq2_to_peaks/0.1.0",
+      "type": "tool"
+    }
+  },
+  "annotation": "",
+  "a_galaxy_workflow": "true"
+}
